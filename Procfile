@@ -1,0 +1,1 @@
+web:gunicornrice_disease_classifier.wsgi
