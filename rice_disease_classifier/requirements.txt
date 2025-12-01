@@ -1,7 +1,0 @@
-django
-djangorestframework
-pillow
-numpy
-torch
-torchvision
-torchaudio
