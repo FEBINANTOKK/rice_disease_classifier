@@ -1,0 +1,9 @@
+env/
+*.pyc
+__pycache__/
+*.h5
+*.pkl
+*.ipynb
+*.DS_Store
+*.sqlite3
+staticfiles/
