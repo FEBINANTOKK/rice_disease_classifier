@@ -138,11 +138,36 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # For now this is okay while you are wiring Netlify + Render.
 # Later, tighten this to specific origins with CORS_ALLOWED_ORIGINS.
 # CORS_ALLOW_ALL_ORIGINS = True
+# Replace your current CORS section with this:
 CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOWED_ORIGINS = [
-    "https://verdant-cocada-ef4a79.netlify.app",
-    "http://localhost:3000",
+    "https://verdant-cocada-ef4a79.netlify.app",  # Netlify production
+    "http://localhost:3000",                      # Create React App default
+    "http://localhost:5173",                      # Vite dev server (YOUR CURRENT PORT)
     "http://127.0.0.1:3000",
+    "http://127.0.0.1:5173",
+]
+
+# Also add these for POST requests with files:
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
 ]
 
